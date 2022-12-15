@@ -69,5 +69,18 @@ while(current <= a * count)
     current = current + 1;
 }
 */
-
+//или 2 вариант:
+/*
+Console.Write("Введите число: ");
+int a = Convert.ToInt32(Console.ReadLine());
+int min = 1;
+int max = 1;
+if(a > 1) max = a;
+else min = a;
+while(min < max)
+{
+  if(min % 2 == 0)  Console.Write(min + " ");
+    min =  min + 1;  
+}
+*/
 
