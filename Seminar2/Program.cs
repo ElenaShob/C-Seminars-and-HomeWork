@@ -43,11 +43,11 @@ if (a > 0 || a < b)  // или
 //Напишите программу, которая выводит случайное число из отрезка [10, 99] и показывает наибольшую цифру числа.
 
 /*
-int CutNumber(int number)
+int MaxNumber(int number)
 {
     int des = number/ 10;
     int ed = number % 10;
-    max = 0;
+    int max = 0;
 
     if (des > ed)
     {
@@ -61,16 +61,18 @@ int CutNumber(int number)
 }
 
 int randNumber = new Random().Next(10, 100);
-Console.WriteLine("Текущее число " + randNumber);
+Console.WriteLine("Current number " + randNumber);
 
-int newNumber = MaxNumber(randNumber)*/
-
+int newNumber = MaxNumber(randNumber);
+Console.WriteLine("Maximum number is " + newNumber);
+*/
 
 //Напишите программу, которая будет принимать на вход два числа и определять, является ли второе число кратным первому.
+
 /*
 bool InfoNumber(int num1, int num2)
 {
-    if (num1 % num2 == 0) return true;
+    if (num2 % num1 == 0) return true;
     else return false;
 }
 
@@ -79,10 +81,14 @@ int num1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе число: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine(InfoNumber(num1, num2));
-*/
-//Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число квадратом другого.
+if (InfoNumber(num1, num2))
+    Console.WriteLine("Второе число явлется кратным первому");
+else
+    Console.WriteLine("Второе число не кратно первому");
+    */
 
+//Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число квадратом другого.
+/*
 bool QuadroNumber(int num1, int num2)
 {
 if (num1==num2*num2 || num2==num1*num1) return true;
@@ -101,7 +107,4 @@ else
 {
  Console.Write("Одно из чисел не является квадратом другого");   
 }
-
-{
-    
-}
+*/
