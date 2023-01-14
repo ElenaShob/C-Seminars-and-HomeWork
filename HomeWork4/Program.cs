@@ -45,7 +45,31 @@ Console.WriteLine($"Sum of digit: {result}");
 
 //Задача 29: Напишите программу, которая задаёт массив из m элементов и выводит их на экран.
 //Массив задается пользователем
+/*
+int [] CreateUserArray ()
+{
+    Console.Write("Из скольки чисел будет состоять массив: ");
+    int size = Convert.ToInt32(Console.ReadLine());
+    int[] array = new int[size];
+    for (int i=0; i<size; i++)
+    {
+        Console.Write("Введите число: ");
+        array[i] = Convert.ToInt32(Console.ReadLine());
+    }
+    return array;
+}
 
-int CreateUserArray (int num)
+void ShowArray(int[] array)
+{
+    for( int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i]);
+        if(i<array.Length-1)
+        Console.Write(", ");
+    }
+    Console.WriteLine();
+}
 
-
+int [] newArray = CreateUserArray();
+ShowArray(newArray);
+*/
