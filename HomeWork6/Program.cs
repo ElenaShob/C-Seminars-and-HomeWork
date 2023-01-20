@@ -9,7 +9,7 @@ int CountNumbers(int size)
     {
         Console.Write("Введите число: ");
         int num = Convert.ToInt32(Console.ReadLine());
-        if (num > 0) // не считаю 0 положительным.
+        if (num > 0) 
             count +=1;
     }
     return count;
@@ -17,7 +17,7 @@ int CountNumbers(int size)
 
 Console.Write("Введите количество чисел для проверки: ");
 int m = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Количество положительных чисел: " + CountNumbers(m));
+Console.WriteLine("Количество чисел больше 0: " + CountNumbers(m));
 */
 
 //Напишите программу, которая найдёт точку пересечения двух прямых, 
