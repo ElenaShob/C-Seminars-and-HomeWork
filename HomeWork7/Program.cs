@@ -129,15 +129,13 @@ double[] AverageColumns(int[,] array)
 {
     int l = array.GetLength(1);
     double[] resultArray = new double[l];
-    double result = 0;
-   
+    
        for (int j = 0; j < l; j++)
         {   double sum = 0;
             for (int i = 0; i < array.GetLength(0); i++)
                 sum += array[i,j];
             
-            result = sum / l;
-            resultArray[j] = Math.Round(result,2);
+            resultArray[j] = Math.Round((sum / l),2);
         }
         return resultArray;
 }
@@ -147,9 +145,9 @@ void ShowArray(double[] array)
 {
     for( int i = 0; i < array.Length; i++)
     {
-        Console.Write(array[i] + "; ");
         if (array[i] == array[array.Length-1]) 
             Console.Write(array[i] + ".");
+        else Console.Write(array[i] + "; ");
     }
     Console.WriteLine();
 }
