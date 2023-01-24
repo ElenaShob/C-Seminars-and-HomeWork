@@ -72,7 +72,7 @@ void Show2dArray(int[,] array)
     }
 }
 
-void ReturnElement(int [,] array)
+void ReturnElement(int[,] array)
 {
     Console.Write("Input index row: ");
     int row = Convert.ToInt32(Console.ReadLine());
@@ -84,6 +84,7 @@ void ReturnElement(int [,] array)
     
 }
 
+
 int[,] myArray = CreateRandom2dArray();
 Show2dArray(myArray);
 ReturnElement(myArray);
@@ -92,6 +93,7 @@ ReturnElement(myArray);
 // Задача 52. Задайте двумерный массив из целых чисел. 
 // Найдите среднее арифметическое элементов в каждом столбце.
 
+/*
 int[,] CreateRandom2dArray()
 {
     Console.Write("Input a numbers of rows: ");
@@ -127,33 +129,34 @@ double[] AverageColumns(int[,] array)
 {
     int l = array.GetLength(1);
     double[] resultArray = new double[l];
-     double result = 0;
+    double result = 0;
    
        for (int j = 0; j < l; j++)
-        {   int sum = 0;
+        {   double sum = 0;
             for (int i = 0; i < array.GetLength(0); i++)
                 sum += array[i,j];
             
             result = sum / l;
-            resultArray[j] = (double)result;
-            
+            resultArray[j] = Math.Round(result,2);
         }
         return resultArray;
 }
     
-
 void ShowArray(double[] array)
 
 {
     for( int i = 0; i < array.Length; i++)
-    Console.Write(array[i] + " ");
-
+    {
+        Console.Write(array[i] + "; ");
+        if (array[i] == array[array.Length-1]) 
+            Console.Write(array[i] + ".");
+    }
     Console.WriteLine();
 }
 
-
 int[,] myArray = CreateRandom2dArray();
 Show2dArray(myArray);
-double[] a = AverageColumns(myArray);
-ShowArray(a);
-
+double[] newArray = AverageColumns(myArray);
+Console.WriteLine($"Среднee арифметическое каждого столбца: ");
+ShowArray(newArray);
+*/
