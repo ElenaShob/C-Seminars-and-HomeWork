@@ -248,25 +248,44 @@ Show3dArray(my3dArray);
 
 // Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
 /*
-int[,] SpiralArray4x4()
+int[,] SpiralSquareArray()
 {
-    int row = 4;
-    int column = 4;
-    int startNum = 0;
+    int row = 6;
+    int column = 6;
+    int startNum = 1;
+    int k = 0;
     int[,] array = new int[row, column];
-    
-    for (int stepMin = 0; stepMin < row-2; stepMin++)
-        for (int x = stepMin, i = row-1-stepMin-1; x < row-1-stepMin; x++, i--)
-            for (int y = stepMin+1, j = column-1-stepMin-1; y < column-1-stepMin; y++, j--)
-            {
-                array[x,y] = startNum += 1;
-                array[i,j] = startNum += 1;
-            }
-            
+    while(startNum<=row*column)
+    {
+        for(int j = 0+k; j < column-k; j++)
+        {
+        array[0+k,j] = startNum;
+        startNum++;
+        }
+        startNum--;
+        for(int i = 0+k; i < row-k; i++)
+        {
+        array[i,column-1-k] = startNum;
+        startNum++;
+        }
+        startNum--;
+        for(int j = column-1-k; j >=0+k; j--)
+        {
+        array[row-1-k,j] = startNum;
+        startNum++;
+        }
+        startNum--;
+        for(int i = row-1-k; i > 0+k; i--)
+        {
+        array[i,0+k] = startNum;
+        startNum++;
+        }
+        
+        k++;
+    }
+
     return array;
 }
-
-
 void Show2dArray(int[,] array)
 {
     for(int i = 0; i < array.GetLength(0); i++)
@@ -278,6 +297,6 @@ void Show2dArray(int[,] array)
     }
 }
 
-int[,] myArray = SpiralArray4x4();
+int[,] myArray = SpiralSquareArray();
 Show2dArray(myArray);
 */
